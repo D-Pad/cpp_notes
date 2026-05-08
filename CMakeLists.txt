@@ -70,6 +70,8 @@ add_executable(
 	src/memory/CopyConstructor.cpp
 	src/memory/RuleOfThree.cpp
 
+	src/algorithms/Algos.cpp
+
 )
 
 target_include_directories(test PRIVATE src)

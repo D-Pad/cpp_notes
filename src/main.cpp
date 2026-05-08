@@ -22,6 +22,7 @@
 #include "memory/MemoryRegions.h"
 #include "memory/Destructors.h"
 #include "memory/CopyConstructor.h"
+#include "algorithms/Algos.h"
 
 
 int main() {
@@ -35,7 +36,7 @@ int main() {
     // ArrayExample(); 
     // VectorExample(); 
     // MapExample(); 
-    RefExample();
+    // RefExample();
     // CStringExample();
     // ScopeMain();
     // Optionals(2, 5);  // <- This function has a third optional parameter
@@ -57,6 +58,7 @@ int main() {
     // destructionExample();
     // copyExample();
     // ruleOfThree();
+    AlgoExamples();
 
     //Testing();
 
