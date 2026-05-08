@@ -1,5 +1,6 @@
 #include "collections/Collections.h"
 #include "data_types/DataTypes.h"
+#include "data_types/strings/Strings.h"
 #include "enum/Enums.h"
 #include "file_io/FileIO.h"
 #include "functions/Funcs.h"
@@ -34,11 +35,12 @@ int main() {
     // SwitchTest(2); 
     // EnumExample();
     // ArrayExample(); 
-    TwoDimensionalArrayExample(); 
+    // TwoDimensionalArrayExample(); 
     // VectorExample(); 
     // MapExample(); 
     // RefExample();
     // CStringExample();
+    NullTerminatedCString(); 
     // ScopeMain();
     // Optionals(2, 5);  // <- This function has a third optional parameter
     // Overloaded();
