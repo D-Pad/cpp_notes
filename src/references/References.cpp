@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iomanip>
+#include <vector>
 using namespace std; 
 
 
@@ -66,6 +67,16 @@ void RefExample() {
          << " 4| cout << numA << endl;" << endl
          << "```" << endl
          << "Output == " << numA << endl;
+
+    // There are multiple ways to dereference a pointer value. Either with an 
+    // arrow `->` or with parenthesis and an asteric `*val`. If calling a 
+    // method on a reference type, you must use parenthesis or arrow. Such the
+    // examples below.
+    vector<int> nums = {1, 2, 3, 4};
+    vector<int>* values = &nums;
+    nums.at(0) = 29;
+    cout << "Ref value with `->` syntax    : " << values->at(0) << endl;
+    cout << "Ref value with `(*val)` syntax: " << (*values).at(0) << endl;
 
 }
 

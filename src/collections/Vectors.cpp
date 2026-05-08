@@ -16,6 +16,7 @@ void VectorExample() {
     // Vector elements are accessed with the .at() method
     nums.at(0) = 29;
     cout << "Vec 0: " << nums.at(0) << endl;
+    cout << "Vec size: " << nums.size() << endl;
 
     // Initialize a vector with all values the same
     std::vector<float> multipliers(3, 0.1);
@@ -32,6 +33,14 @@ void VectorExample() {
     // parenthesis in the variable name
     vector<char> characters = {'d', 'a'};
     cout << "Chars 1: " << characters.at(1) << endl; 
+
+    // Vectors can be declared with initial values using curly braces.
+    vector<int> someValues = {1, 2, 3, 4};
+    
+    // Otherwise you can push values into a declared vector 
+    vector<char> chars;
+    chars.push_back('a');
+    chars.push_back('b');
 
 }
 

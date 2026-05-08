@@ -35,7 +35,7 @@ int main() {
     // ArrayExample(); 
     // VectorExample(); 
     // MapExample(); 
-    // RefExample();
+    RefExample();
     // CStringExample();
     // ScopeMain();
     // Optionals(2, 5);  // <- This function has a third optional parameter
@@ -58,7 +58,7 @@ int main() {
     // copyExample();
     // ruleOfThree();
 
-    Testing();
+    //Testing();
 
     return 0;
 
