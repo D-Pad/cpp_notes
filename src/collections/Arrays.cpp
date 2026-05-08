@@ -14,6 +14,10 @@ void TwoDimensionalArrayExample() {
     grid[1][2] = 64;
 
     cout << "grid[0][0] = " << grid[0][0] << endl;
+
+    // 2D arrays can also be declared with initial values like this:
+    int secondGrid[2][3] = { {1, 2, 3}, {4, 5, 6} };
+
 };
 
 
