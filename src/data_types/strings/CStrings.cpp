@@ -31,4 +31,24 @@ void CStringExample() {
 
 };
 
+// A programmer can use an array to store a sequence of characters, known as 
+// a string. Char arrays were the only kinds of strings in C++'s predecessor 
+// language C, and thus are sometimes called C strings to distinguish them 
+// from C++'s string type. An example is: char movieTitle[20] = "Star Wars";. 
+// Because a string can be shorter than the character array, a string in a 
+// char array must end with a special character known as a null character, 
+// written as '\0'. Given a string literal like "Star Wars", the compiler 
+// automatically appends a null character.
+void NullTerminatedCString() {
+
+    char name[6] = "D-Pad"; // Size must be at least 6, to include the null
+                            // terminator character `\0` which is automatically
+                            // inserted by the compiler when declaring a 
+                            // c-string using double quote syntax
+
+    // A c-string that's declared with the null terminator
+    char word[10] = { 'O', 'v', 'e', 'r', 'w', 'a', 't', 'c', 'h', '\0' };    
+
+}
+
 

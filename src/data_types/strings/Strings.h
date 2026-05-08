@@ -4,4 +4,5 @@ void StringExample();
 void InputExample();
 void FormattingExample();
 void CStringExample();
+void NullTerminatedCString();
 
