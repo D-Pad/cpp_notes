@@ -2,6 +2,21 @@
 using namespace std;
 
 
+void TwoDimensionalArrayExample() {
+
+    int grid[2][3];
+    grid[0][0] = 29;
+    grid[0][1] = 47;
+    grid[0][2] = 12;
+    
+    grid[1][0] = 83;
+    grid[1][1] = 5;
+    grid[1][2] = 64;
+
+    cout << "grid[0][0] = " << grid[0][0] << endl;
+};
+
+
 void ArrayExample() {
 
     cout << std::endl << "~~~ Arrays ~~~" << std::endl;

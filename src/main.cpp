@@ -34,6 +34,7 @@ int main() {
     // SwitchTest(2); 
     // EnumExample();
     // ArrayExample(); 
+    TwoDimensionalArrayExample(); 
     // VectorExample(); 
     // MapExample(); 
     // RefExample();
@@ -58,7 +59,7 @@ int main() {
     // destructionExample();
     // copyExample();
     // ruleOfThree();
-    AlgoExamples();
+    // AlgoExamples();
 
     //Testing();
 
