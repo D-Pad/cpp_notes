@@ -5,4 +5,6 @@ void InputExample();
 void FormattingExample();
 void CStringExample();
 void NullTerminatedCString();
+void StringReplaceExample();
+
 

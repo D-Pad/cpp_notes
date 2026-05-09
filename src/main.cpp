@@ -40,7 +40,8 @@ int main() {
     // MapExample(); 
     // RefExample();
     // CStringExample();
-    NullTerminatedCString(); 
+    // NullTerminatedCString(); 
+    StringReplaceExample(); 
     // ScopeMain();
     // Optionals(2, 5);  // <- This function has a third optional parameter
     // Overloaded();

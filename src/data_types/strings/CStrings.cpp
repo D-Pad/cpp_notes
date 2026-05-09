@@ -75,5 +75,93 @@ void NullTerminatedCString() {
     // locations are printed out; the program may also crash.
 
 }
+/*
++--------------+-------------------------------------------------------------+
+| strcpy()     | strcpy(destStr, sourceStr)                                  |
+|              |                                                             |
+|              | Copies sourceStr (up to and including null character)       |
+|              | to destStr.                                                 |
++--------------+-------------------------------------------------------------+
+| strncpy()    | strncpy(destStr, sourceStr, numChars)                       |
+|              |                                                             |
+|              | Copies up to numChars characters.                           |
++--------------+-------------------------------------------------------------+
+| strcat()     | strcat(destStr, sourceStr)                                  |
+|              |                                                             |
+|              | Copies sourceStr (up to and including null character)       |
+|              | to end of destStr (starting at destStr's null character).   |
++--------------+-------------------------------------------------------------+
+| strncat()    | strncat(destStr, sourceStr, numChars)                       |
+|              |                                                             |
+|              | Copies up to numChars characters to destStr's end,          |
+|              | then appends null character.                                |
++--------------+-------------------------------------------------------------+
 
+For strcpy(), a common error is to copy a source string that is too large, 
+causing an out-of-range access in the destination string. 
+*/
+
+
+/*
++--------------+-------------------------------------------------------------+
+| strchr()     | strchr(sourceStr, searchChar)                               |
+|              |                                                             |
+|              | Returns NULL if searchChar does not exist in sourceStr.     |
+|              | Else, returns address of first occurrence.                  |
+|              | NULL is defined in the cstring library.                     |
++--------------+-------------------------------------------------------------+
+| strlen()     | size_t strlen(sourceStr)                                    |
+|              |                                                             |
+|              | Returns number of characters in sourceStr up to,            |
+|              | but not including, first null character.                    |
+|              | size_t is integer type.                                     |
++--------------+-------------------------------------------------------------+
+| strcmp()     | int strcmp(str1, str2)                                      |
+|              |                                                             |
+|              | Returns 0 if str1 and str2 are equal,                       |
+|              | non-zero if they differ.                                    |
++--------------+-------------------------------------------------------------+
+
+strcmp() is usually used to compare for equality, returning 0 if the strings 
+are the same length and have identical characters. A common error is to use 
+== when comparing C strings, which does not work. str1 == str2 compares the 
+strings' addresses, not their contents. Because those addresses will usually 
+be different, str1 == str2 will evaluate to 0. This is not a syntax error, 
+but clearly a logic error. Another common error is to forget to compare the 
+result of strcmp with 0, as in if (strcmp(str1, str2)) {...}. The code is not 
+a syntax error, but is a logic error because the if condition will be false (0)
+when the strings are equal. The correct condition would instead be if (
+strcmp(str1, str2) == 0) {...}. Although strcmp returns 0, a good practice is 
+to avoid using if (!strcmp(str1,str2)) {...} because that 0 does not 
+represent "false" but rather is encoding a particular situation.
+
+strcmp(str1, str2) returns a negative number if str1 is less than str2, and a 
+positive number if str1 is greater than str2. Evaluation first compares the 
+character pair at element 0, then at element 1, etc., returning as soon as a 
+pair differs.
+*/
+
+void StringReplaceExample() {
+
+    char repThisChar = ' ';
+    char withThisChar = '_';
+    char str[13] = { 
+        'H', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd', '!', '\0' 
+    };
+
+    cout << "Before: " << str << endl;
+
+    int i;
+    for (i = 0; i < strlen(str); ++i) {
+        if (str[i] == repThisChar) {
+            str[i] = withThisChar;
+        }
+        if (str[i] == '!') {
+            str[i] = '?';
+        }
+    }
+
+    cout << "After: " << str << endl;
+
+}
 

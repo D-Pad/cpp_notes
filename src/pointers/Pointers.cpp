@@ -28,18 +28,18 @@
 // +--------------------------------+-----------------------------------------+
 // |             Vector             |               Linked list               |
 // +--------------------------------+-----------------------------------------+
-// | - Stores items in contiguous   | - Stores each item anywhere in memory,  | 
-// |   memory locations             |   with each item pointing to the next   | 
+// | - Stores items in contiguous   | - Stores each item anywhere in memory,  |
+// |   memory locations             |   with each item pointing to the next   |
 // |                                |   list item                             |
-// | - Supports quick access to     |                                         |  
+// | - Supports quick access to     |                                         |
 // |   i'th element via at(i)       | - Supports fast inserts or deletes      |
 // |                                |                                         |
-// |   * May be slow for inserts or |   * access to i'th element may be slow  | 
-// |     erases on large lists due  |     as the list must be traversed from  |  
-// |     to necessary shifting of   |     the first item to the i'th item     | 
+// |   * May be slow for inserts or |   * access to i'th element may be slow  |
+// |     erases on large lists due  |     as the list must be traversed from  |
+// |     to necessary shifting of   |     the first item to the i'th item     |
 // |     elements                   |                                         |
-// |                                | - Uses more memory due to storing a     | 
-// |                                |   link for each item                    | 
+// |                                | - Uses more memory due to storing a     |
+// |                                |   link for each item                    |
 // +--------------------------------+-----------------------------------------+
 
 
